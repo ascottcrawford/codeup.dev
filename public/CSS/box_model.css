@@ -1,0 +1,63 @@
+h1 {
+	color: blue;
+	text-decoration: underline;
+}
+
+#red {
+	width: 150px;
+	height: 50px;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: red;
+	text-decoration: bold; color: white;
+}
+
+#orange {
+	width: 150px;
+	height: 50px;
+	border: 1px solid black;	
+	padding: 10px;
+	background-color: orange;
+	text-decoration: bold; color: white;
+	margin: 10px 30px;
+}
+
+#yellow {
+	width: 150px;
+	height: 50px;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: yellow;
+	text-decoration: bold; color: white;
+	margin: 10px 60px;
+}
+
+#green {
+	width: 150px;
+	height: 50px;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: green;
+	text-decoration: bold; color: white;
+	margin: 10px 90px
+}
+
+#blue {
+	width: 150px;
+	height: 50px;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: blue;
+	text-decoration: bold; color: white;
+	margin: 10px 120px
+}
+
+#purple {
+	width: 150px;
+	height: 50px;
+	border: 1px solid black;
+	padding: 10px;
+	background-color: purple;
+	text-decoration: bold; color: white;
+	margin: 10px 150px
+}

@@ -1,0 +1,28 @@
+body {
+	padding: 0;
+	margin: 0;
+	border: 0px;
+	color: #000000;
+	font-family: 'Trebuchet MS',verdana;
+}
+
+
+.left-column {
+	width: 20%;
+	height: 100%;
+	background-color: #999f8e;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.right-column {
+	width: 80%; 
+	height: 100%;
+	padding-left: 10px;
+	background-color: #d2d8c7;
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: auto;
+}

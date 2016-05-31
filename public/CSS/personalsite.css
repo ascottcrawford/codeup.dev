@@ -1,0 +1,29 @@
+.btn-success {
+	background-color: #337ab7;
+	border-color: #337ab7;
+}
+.btn-success:hover {
+	background-color: #337ab7;
+	border-color: #337ab7;
+}
+
+.btn-success:active {
+	background-color: #337ab7;
+	border-color: #337ab7;
+}
+.btn-success:focus {
+	background-color: #337ab7;
+	border-color: #337ab7;
+}
+.btn-success:visited {
+	background-color: #337ab7;
+	border-color: #337ab7;
+}
+
+.nav-pills {
+	margin-bottom: 20px
+}
+
+#resumeheadshot {
+	border-radius: 10%; 
+}
