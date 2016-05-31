@@ -20,7 +20,7 @@
 			</ul>
 		</div>
 		 <div col-md-5 "img-thumbnail">
-		                    <div id="feedback"> <div class="container">
+		 <div id="feedback"> <div class="container">
 		<div class="col-xs-12 col-md-8">
 		    <div class="form-area">  
 		        <form role="form">
