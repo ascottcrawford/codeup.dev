@@ -33,6 +33,14 @@ if (georgeSpend > spendForDiscount) {
 }
 
 
+if (cameronSpend > spendForDiscount) {
+	console.log("Cameron Spent $" + (cameronSpend*discount).toFixed(2));
+} else {
+	console.log("Cameron Spent $" + (cameronSpend).toFixed(2));
+}
+
+
+
 var flipACoin = Math.floor(Math.random()*2);
 
 console.log(flipACoin); 
