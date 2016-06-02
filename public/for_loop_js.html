@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Loop JS</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+    'use strict';
+
+    // Question #2
+    var message;
+
+    for (var i = 1; i<=10; i++) 
+    {
+
+        message = '';
+
+        for (var j = 1; j <= i; j++) 
+        {
+            if (i == 10) 
+            {
+                message = message +0;
+            } 
+            else
+            {
+            message = message + i;
+        }
+    }
+        console.log(message);
+    }
+
+
+    // Question #3
+    var randomNumber = Math.floor(Math.random() * 10) + 1;
+    for (var i = 1; i<=10; i++) { 
+        var product = randomNumber * i;
+        console.log(i + "x" + randomNumber + "=" + product);
+    }
+
+    // Question #4
+  
+
+    for (var i = 1; i<10; i++) {
+        var randomNumber = Math.floor(Math.random() * 180) + 20;
+        var message = (randomNumber % 2 == 0) ? randomNumber + 'is even' : randomNumber + ' is odd';
+            console.log(message);
+    }
+
+ 
+
+    // Question #5
+    for (var a = 100; a>=5; a=a-5) {
+        console.log(a);
+}
+
+    </script>
+</body>
+</html>
