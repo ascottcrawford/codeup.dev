@@ -36,7 +36,7 @@
     console.log("=======================================================");
     // TODO: Change the radius of the circle to 5.
 
-    circle.radius 5,
+    circle.radius = 5
 
 
     // log info about the circle
