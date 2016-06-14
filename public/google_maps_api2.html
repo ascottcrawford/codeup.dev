@@ -48,7 +48,7 @@
 
 		       // Recenter the map over the address
 		       map.setCenter(results[0].geometry.location);
-		       map.setZoom(13);
+		       map.setZoom(12);
 		   } else {
 
 		       // Show an error message with the status if our request fails
@@ -67,6 +67,7 @@
 		markers.forEach(function (element) {
 		
 			var location = { lat: element.lat, lng: element.lng};
+			var image = "/img/restaurant.png"
 
 			// Add the marker to our existing map
 			var marker = new google.maps.Marker({
@@ -74,9 +75,9 @@
 			    animation: google.maps.Animation.DROP,
 			    map: map,
 			    icon: {
-			    	path: google.maps.SymbolPath.CIRCLE,
-			    	scale: 10
-			    }
+				    	url: '/img/restaurant.png',
+				    	scale: 10
+				    }
 			});
 			var infowindow = new google.maps.InfoWindow({
 			    content: element.content
