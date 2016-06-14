@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title>JQuery Exercises</title>
+
+</head>
+<body>
+
+<div class="mainarea">
+	<h1 id="header">JQuery Rocks</h1>
+	<p id="para">Hello JQuery</p>
+	<ul>
+		<li>Cross Platform</li>
+		<li>Javascript Library</li>
+	</ul>
+</div>
+<div class="text">
+        <p class="lorem">Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
+</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+
+		$(document).ready(function() {
+            var contents = $('#header').html();
+            alert(contents);
+        });
+
+		$(document).ready(function() {
+            var contents2 = $('#para').html();
+            alert(contents2);
+        });
+
+
+
+			// (function() {
+			// 		var paragraph = document.getElementById('para');
+			// 		console.log( paragraph.innerText );
+			// })();
+			// window.onload = function() {
+			//     alert( 'The page has finished loading!' );
+			// }
+
+			// $(document).ready(function(){
+			// 	//id selector
+			// 	$('#header')
+
+			// 	//clas selector
+			// 	//defined function doStuff
+			// 	var javaone = document.getElementsByClassName('codeup');
+			// 	for (var i=0; i<one.length; i++) {
+			// 		javaone[i].addEventListener('click', doStuff);
+			// 	}
+			// 	//change text color
+			// 	var javaColor = document.getElementsByClassName('codeup');
+			// 	for (var i=0; i<one.length; i++) {
+			// 		javaColor[i].addEventListener('click', doStuff);
+
+			// 	var javatwo = $('.codeup');
+			// 	javatwo.click(doStuff);
+
+			// 	var jsColor = $('.codeup');
+			// 	jsColor.css({'color': 'burlywood', 'font-size': '30px'});
+
+			// 	//tagname selector
+			// 	$('p')
+			// 	$('span')
+			// 	$('div')
+
+			// 	//combo selector
+			// 	//article.clickbait p
+			// 	$('article.clickbait p')
+
+			// 	//multiple selector
+			// 	$('p, span, div')
+			// 	$('article, .codeup, #para')
+
+
+			// 	var $paragraph = $('#para');
+			// 	console.log( $paragraph.text());
+			// });
+	</script>
+</body>
+</html>
