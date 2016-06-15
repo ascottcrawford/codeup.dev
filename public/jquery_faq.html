@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>JQuery FAQ</title>
+	<style>
+		.invisible {
+			display: none;
+		}
+	</style>
+
+</head>
+<body>
+
+<div class="main">
+	<h1 id="header">National Parks</h1>
+	<a id="anchor">Anchor</a>
+	<dl>
+		<dt>Yellowston NP</dt>
+		<dd class="invisible">Wyoming</dd>
+		<dt>Rocky Mountain National Park</dt>
+		<dd class="invisible">Long's Peak</dt>
+		<dt>Mount Whitney</dt>
+		<dd class="invisible">Highest Point in Continental US</dd>
+		<dt>Cascades</dt>
+		<dd class="invisible">Mount Baker</dd>
+		<dt>Guadalupe Peak</dt>
+		<dd class="invisible">Davis Mountains</dd>
+		<dt>Grays and Torrey</dt>
+		<dd class="invisible">Fourteeners</dd>
+		<dt>Yosemite</dt>
+		<dd class="invisible">El Capitan</dd>
+		<dt>Grand Teton</dt>
+		<dd class="invisible">Wyoming</dd>
+		<dt>Sequoia National Park</dt>
+		<dd class="invisible">California</dd>
+		<dt>Redwood Forest</dt>
+		<dd class="invisible">California Two</dd>
+	</dl>
+</div>
+
+<div class="list">
+	<h1 id="details">Details of Parks<h1>
+		<h3>Rocky Mountain National Park</h3>
+		<ul>
+			<li>Colorado</li>
+			<li>Long's Peak</li>
+			<li>Continental Divide</li>
+			<li>Big Horn Sheep</li>
+		</ul>
+		<h3>Aconcagua</h3>
+		<ul>
+			<li>Argentina</li>
+			<li>Penitentes</li>
+			<li>23,000 Feet</li>
+			<li>Mendoza</li>
+		</ul>
+		<h3>Whitney</h3>
+		<ul>
+			<li>Summit of Continental US</li>
+			<li>Sequoia National Forest</li>
+			<li>John Muir Trail</li>
+			<li>SoCal</li>
+		</ul>
+</div>
+
+
+			<!-- $('dd').each(function(index, element) {
+			console.log($(element));
+
+			$('dd').first().css('color', "red");
+
+		}) -->
+	<!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+	<script>
+
+            $('#anchor').click(function(event) {
+            	event.preventDefault();
+            	$('dd').toggleClass('invisible');
+
+        	});
+
+
+	</script>
+</body>
+</html>
