@@ -5,30 +5,25 @@
 </head>
 <body>
 
-<div class="mainarea">
+<div class="codeup">
 	<h1 id="header">JQuery Rocks</h1>
-	<p id="para">Hello JQuery</p>
+	<h2 id="codeup">Test Codeup ID</h2>
+	<p class="codeup">Hello JQuery</p>
 	<ul>
 		<li>Cross Platform</li>
 		<li>Javascript Library</li>
 	</ul>
 </div>
 <div class="text">
-        <p class="lorem">Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
+        <p class="codeup">Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
 </div>
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script>
-
-		$(document).ready(function() {
-            var contents = $('#header').html();
-            alert(contents);
-        });
-
-		$(document).ready(function() {
-            var contents2 = $('#para').html();
-            alert(contents2);
-        });
+	
+			$(document).ready(function() {
+				$('.codeup').css('border', '1px solid red');
+			});
 
 
 
