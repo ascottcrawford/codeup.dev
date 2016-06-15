@@ -22,9 +22,33 @@
 	<script>
 	
 			$(document).ready(function() {
-				$('li').css('font-size', '20px');
-				$('h1, p, li').css('background-color', 'yellow');
+
+				$('h1').click(function() {
+				$(this).css('background-color', '#FF0');
+				}
+				);
 			});
+
+			$(document).ready(function() {
+
+				$('p').dblclick(function() {
+				$(this).css('font-size', '18px');
+				}
+				);
+			});
+
+			$(document).ready(function() {
+
+				$('li').hover(function() {
+				$(this).css('color', 'red');
+				},
+				function(){
+					$(this).css('color', '#FFF');
+				}
+				);
+			});
+
+
 			// var str = $('h1').text();
 			// $(document).ready(function() {
 			//     alert( str );
