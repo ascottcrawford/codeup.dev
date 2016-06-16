@@ -18,9 +18,27 @@
         <p class="codeup">Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
 </div>
 
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<form>
+		<input type="text" id="textfield">
+</form>
+
+
+	<!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
 	<script>
-	
+
+			$(document).ready(function() {
+
+			console.log($('p').length);
+			console.log($('h2').css('color'));
+
+			$('#textfield').keydown(function (event) {
+				console.log(event.keydown);
+				}
+			 );
+			});
+
+
 			$(document).ready(function() {
 
 				$('h1').click(function() {
