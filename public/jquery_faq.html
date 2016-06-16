@@ -73,21 +73,39 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
 	<script>
 
+
+			// $('.invisible').hide();
+			// $('.invisible').show();
+			$('.invisible').fadeIn();
+
+
+
+
             $('#anchor').click(function(event) {
             	event.preventDefault();
             	$('dd').toggleClass('invisible');
 
         	});
 
+			
+
         	$('ul').each(function(index, element) {
         		$(element).children().first().css('font-weight', 'bold');
         	});
 
         	$('li').click(function() {
-        		$(this).parent().toggleClass('invisible');
+        		$(this).parent().hide();
         	}); 
 
-        
+
+        	// $('h3').click(function() {
+        	// 	$(this).hide();
+        	// });
+
+			$('h3').click(function() {
+        		$(this).slideUp();
+        	});
+        	
 
         	
 
