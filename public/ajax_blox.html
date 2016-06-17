@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Ajax Blog</title>
+	<link rel="stylesheet" href="/CSS/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://use.fontawesome.com/70d063044b.js"></script>
+
+</head>
+<body>
+<div id="posts">
+	
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+(function() {
+    "use strict";
+
+     function getData() {
+
+        $.get("/data/blog.json").done(function(blog) {
+            // $('#insertBlog').html(""); 
+             blog.forEach(function(post, i) {
+                   $('#posts').html("<h1>" + blog[i].title + "</h1><p>" + blog[i].content + "</p><h5>" + blog[i].categories.join(", ") + "</h5><h6>" + blog[i].date + "</h6>" + $('#posts').html());
+                })
+            });  
+    }
+
+    getData();
+
+})();
+</script>
+
+
+</body>
+</html>
