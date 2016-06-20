@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>Weather Map</title>
+	<style>
+		#googlemap {
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+<h1>Weather Forecast</h1>
+
+<div id="googlemap"></div>
+<div id="current"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVXLB1ax0Lu2jXGVvQHQUxhBH3CCcMHAY"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<div id="returnstats"></div>
+<table id="weathertable">
+    <thead>
+        <tr>
+         	<h1>Weather Application</h1>
+        </tr>
+    </thead>
+    <tbody id="tablestats"></tbody>
+</table>
+
+
+<script>
+	"use strict";
+
+	(function() {
+
+		
+
+		var marker;
+
+		function initMap() {
+		  var myLatLng = {lat: 29.626403, lng: -98.608574};
+
+		  var map = new google.maps.Map(document.getElementById('googlemap'), {
+		    zoom: 4,
+		    center: myLatLng
+		  });
+
+		  mapTypeId: google.maps.MapTypeId.HYBRID
+
+		  marker = new google.maps.Marker({
+		    position: myLatLng,
+		    draggable: true,
+		    map: map,
+		    title: 'Weather Map!'
+		  });
+		}
+
+		initMap();
+
+		google.maps.event.addListener(marker, 'dragend', function (event) {
+			var lat = marker.lat;
+			var lng = marker.lng;
+		});
+
+		function getWeather() {
+			$.get("http://api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&cnt={cnt}", {
+			    APPID: "6eec00776145be2131baf58d960d3df3",
+			    lat: lat,
+			    lng: lng,
+			    units: "imperial",
+			    cnt: 3
+			}).done(function (weather) {
+				var threeDays = weather.list;
+				var cityName = weather.city.name;
+				threeDays.forEach(function (forecast) {
+				var table = "<tr><td>" + cityName + "</td></tr>" + "<tr><td>" + forecast.temp.max + "/" + forecast.temp.min + "</td></tr>" + "<tr><td><img src=\"http://openweathermap.org/img/w/" + forecast.weather[0].icon + ".png\"></td></tr>" + "<tr><td>" + forecast.weather[0].main + ": " + forecast.weather[0].description + "</td></tr><tr><td>Humidity: " + forecast.humidity + "</td></tr><tr><td>Wind: " + forecast.speed + "</td></tr><tr><td>Pressure: " + forecast.pressure + "</td></tr>";
+				$('#tablestats').html(table + $('#tablestats').html());
+			})
+		})
+		}
+		// $('#show').on("click", getWeather);
+		getWeather();
+
+
+	})();
+
+
+</script>
+</body>
+</html>
+
