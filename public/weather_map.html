@@ -9,6 +9,12 @@
 </head>
 <body>
 <h1>Weather Forecast</h1>
+<h6>Drag Map Marker</h6>
+<table id="latlng">
+	<tr><td>Latitude</td><td><input type="text" id="latbox"></td></tr>
+	<tr><td>Longitude</td><td><input type="text" id="lngbox"></td></tr>
+</table>
+
 
 <div id="googlemap"></div>
 <div id="current"></div>
@@ -40,10 +46,11 @@
 
 		  var map = new google.maps.Map(document.getElementById('googlemap'), {
 		    zoom: 4,
-		    center: myLatLng
+		    center: myLatLng,
+		    mapTypeId: google.maps.MapTypeId.HYBRID
 		  });
 
-		  mapTypeId: google.maps.MapTypeId.HYBRID
+		  
 
 		  marker = new google.maps.Marker({
 		    position: myLatLng,
@@ -51,23 +58,23 @@
 		    map: map,
 		    title: 'Weather Map!'
 		  });
+
+		  google.maps.event.addListener(marker, 'dragend', function (event) {
+		  	$("#latbox").val(this.position.lat());
+		    $("#lngbox").val(this.position.lng());
+		    getWeather();
+		  });
 		}
 
-		initMap();
-
-		google.maps.event.addListener(marker, 'dragend', function (event) {
-			var lat = marker.lat;
-			var lng = marker.lng;
-		});
-
 		function getWeather() {
-			$.get("http://api.openweathermap.org/data/2.5/forecast/daily?lat={lat}&lon={lon}&cnt={cnt}", {
+			$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
 			    APPID: "6eec00776145be2131baf58d960d3df3",
-			    lat: lat,
-			    lng: lng,
+			    lat: marker.position.lat(),
+			    lon: marker.position.lng(),
 			    units: "imperial",
 			    cnt: 3
 			}).done(function (weather) {
+				console.log(weather)
 				var threeDays = weather.list;
 				var cityName = weather.city.name;
 				threeDays.forEach(function (forecast) {
@@ -76,7 +83,8 @@
 			})
 		})
 		}
-		// $('#show').on("click", getWeather);
+
+		initMap();
 		getWeather();
 
 
