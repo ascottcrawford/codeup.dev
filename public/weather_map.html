@@ -1,15 +1,18 @@
 <html>
 <head>
 	<title>Weather Map</title>
+	<link rel="stylesheet" href="/CSS/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		#googlemap {
 			height: 400px;
 		}
+
 	</style>
 </head>
 <body>
 <h1>Weather Forecast</h1>
-<h6>Drag Map Marker</h6>
+<h3>Drag Map Marker to Update Location</h3>
 <table id="latlng">
 	<tr><td>Latitude</td><td><input type="text" id="latbox"></td></tr>
 	<tr><td>Longitude</td><td><input type="text" id="lngbox"></td></tr>
@@ -22,15 +25,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <div id="returnstats"></div>
-<table id="weathertable">
-    <thead>
-        <tr>
-         	<h1>Weather Application</h1>
-        </tr>
-    </thead>
-    <tbody id="tablestats"></tbody>
-</table>
-
+<h1>Weather Application</h1>
+<h2 id="city"></h2>
+<div class="container-fluid">
+<div class="row" id="tablestats"></div>
+</div>
 
 <script>
 	"use strict";
@@ -77,8 +76,9 @@
 				console.log(weather)
 				var threeDays = weather.list;
 				var cityName = weather.city.name;
+				$('#city').html(cityName);
 				threeDays.forEach(function (forecast) {
-				var table = "<tr><td>" + cityName + "</td></tr>" + "<tr><td>" + forecast.temp.max + "/" + forecast.temp.min + "</td></tr>" + "<tr><td><img src=\"http://openweathermap.org/img/w/" + forecast.weather[0].icon + ".png\"></td></tr>" + "<tr><td>" + forecast.weather[0].main + ": " + forecast.weather[0].description + "</td></tr><tr><td>Humidity: " + forecast.humidity + "</td></tr><tr><td>Wind: " + forecast.speed + "</td></tr><tr><td>Pressure: " + forecast.pressure + "</td></tr>";
+				var table = "<div class='col-xs-4'><table><tr><td>" + forecast.temp.max + "/" + forecast.temp.min + "</td></tr>" + "<tr><td><img src=\"http://openweathermap.org/img/w/" + forecast.weather[0].icon + ".png\"></td></tr>" + "<tr><td>" + forecast.weather[0].main + ": " + forecast.weather[0].description + "</td></tr><tr><td>Humidity: " + forecast.humidity + "</td></tr><tr><td>Wind: " + forecast.speed + "</td></tr><tr><td>Pressure: " + forecast.pressure + "</td></tr></table></div>"; 
 				$('#tablestats').html(table + $('#tablestats').html());
 			})
 		})
