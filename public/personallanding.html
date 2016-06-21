@@ -18,7 +18,46 @@
 			  <li role="presentation"><a href="/register.php">Register</a></li>
 			  <li role="presentation"><a href="/login.php">Login</a></li>
 			</ul>
-		
+	<p></p>
+	<div id="container">
+		<div class="row">
+        		<div class="col-xs-8">
+            			<div class="panel panel-default">
+	                		<div class="panel-heading">
+	                    		<h3 class="panel-title">Blog Posts</h3>
+	                		</div>
+                		<div class="panel-body">
+					        <div class="row">
+								<div class="col-xs-8">
+									<div id="posts">
+									</div>
+								</div>
+							</div>
+						</div>
+                	</div>
+                </div>
+    </div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script>
+		(function() {
+		    "use strict";
+
+		     function getData() {
+
+		        $.get("/data/personalblog.json").done(function(blog) {
+		            // $('#insertBlog').html(""); 
+		             blog.forEach(function(post, i) {
+		                   $('#posts').html("<h1>" + blog[i].title + "</h1><p>" + blog[i].content + "</p><h5>" + blog[i].categories.join(", ") + "</h5><h6>" + blog[i].date + "</h6>" + $('#posts').html());
+		                })
+		            });  
+		    }
+
+		    getData();
+
+		})();
+	</script>
 
 
 	</body>
