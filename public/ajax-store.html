@@ -36,11 +36,13 @@
             $('#insertProducts').html(""); 
              inventory.forEach(function(tool, i) {
                    $('#insertProducts').html("<tr><td>" + inventory[i].title + "</td><td>" + inventory[i].quantity + "</td><td>" + inventory[i].price + "</td><td>" + inventory[i].categories.join(", ") + "</td></tr>" + $('#insertProducts').html());
+                   console.log(inventory);
                 })
             });  
     }
 
     $('#refresh').on("click", getData);
+
 
     getData();
   
