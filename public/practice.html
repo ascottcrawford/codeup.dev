@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch JS</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    check this
+    <script>
+    
+    "use-strict";
+
+    // //  var numbers = [12, 36, 17, 87, 10, 5, 241];
+
+    // // function divisibleByThree(numbersArray) {
+    // //     var divisibleByThree = [];
+    // //     numbersArray.forEach(function(number) {
+    // //         if (number % 3 == 0) {
+    // //             divisibleByThreeArray.push(number);
+    // //         }
+    // //     })
+    // //     return divisibleByThreeArray;
+    // // }
+   
+    // // console.log(divisibleByThree(numbers));
+
+    
+    // console.log('Lucky Number Question');
+
+    // var cost = 60
+    // var luckyNumber = {
+    //     randomNumber: null,
+    //     discounts: [
+    //     0, .1, .25, .35, .5, 1
+    // ], 
+    // discountedCost: function(cost){
+    //     return cost - (cost * this.discounts[this.randomNumber]);
+    //     }
+    // };
+
+    // luckyNumber.randomNumber = Math.floor(Math.random()*6);
+    // var cost = 60
+      
+    // console.log('you got a ' + luckyNumber.randomNumber + ' and have to pay ' + luckyNumber.discountedCost(cost));
+
+
+
+    console.log('Three Grades Average Question');
+
+
+// 'use strict';
+
+var awesomeGrade = 80
+var studentName = prompt('Enter name');
+var subject = prompt('Enter subject');
+var addGrade;
+var newGrade = prompt('Enter grade');
+var combinedGrades = {
+    student: 'studentName',
+    subject: 'subject',
+    addGrade: addGrade,
+    grades: [],
+
+    enterGrade: function(enter){
+        addGrade = confirm('Add another grade?');
+        do  {
+            if (addGrade) {
+                newGrade = prompt("Please enter grade.");
+                this.grades.push(Number(newGrade));
+            }
+            addGrade = confirm('Add another grade?');
+            } while (addGrade)
+    },
+
+    averageGrade: function(){
+        var total = 0;
+        this.grades.forEach(function(element, index) {
+            total = total + element;
+        });    
+        var average = (total / this.grades.length);
+        return average;
+    }
+}
+
+combinedGrades.enterGrade();
+
+if (combinedGrades.averageGrade() > awesomeGrade) {
+    alert("You're Awesome!");
+} else {
+    alert("You need more practice.");
+}
+
+function sample(){
+
+    return ;
+    console.log("inside this function");
+}
+
+var checkit = sample();
+
+// console.log('grade question');
+// var grade1 = 70;
+// var grade2 = 80;
+// var grade3 = 95;
+
+// var combinedGrades = grade1 + grade2 + grade3;
+// var numberOfGrades = 3;
+// var awesomeGrade = 80;
+
+// var average = combinedGrades / numberOfGrades;
+
+// if (average > awesomeGrade) {
+//     console.log("You're Awesome!!!!");
+// } else {
+//     console.log('You need more practice.');
+// }
+
+
+
+
+
+
+
+
+
+
+   
+    // var numberZero = 0;
+    // var numberOne = 0;
+    // var numberTwo = 0;
+    // var numberThree = 0;
+    // var numberFour = 0;
+    // var numberFive = 0;
+
+    // for (var i=0; i<100; i++) {
+    //     var random = Math.floor((Math.random()*6));
+    //     if (random == 0) {
+    //         numberZero++;
+    //     } else if (random == 1) {
+    //         numberOne++;
+    //     } else if (random == 2) {
+    //         numberTwo++;
+    //     } else if (random == 3) {
+    //         numberThree++;
+    //     } else if (random == 4) {
+    //         numberFour++;    
+    //     } else if (random == 5) {
+    //         numberFive++;    
+    // }
+    // }
+    // console.log("Zero has ocurred " + numberZero + " many times.");
+    // console.log("One has ocurred " + numberOne + " many times.");
+    // console.log("Two has ocurred " + numberTwo  + " many times.");
+    // console.log("Three has ocurred " + numberThree + " many times.");
+    // console.log("Four has ocurred " + numberFour + " many times.");
+    // console.log("Five has ocurred " + numberFive + " many times.");
+
+
+
+
+    // TODO: Create an array of 4 people's names using literal array notation, in a variable called 'names'.
+
+    // TODO: Create a log statement that will log the number of elements in the names array.
+
+    // TODO: Create log statements that will print each of the names array elements individually.
+	
+
+
+    </script>
+</body>
+</html>

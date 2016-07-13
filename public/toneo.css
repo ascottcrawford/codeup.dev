@@ -1,0 +1,11 @@
+.heroscene {
+			background-image: url('/toneo-city.jpg');
+			background-size: cover;
+			background-position: top center;
+			background-repeat: no-repeat;	
+			height: 600px;
+		}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+		    color: #fff;
+		    background-color: #000;
+		}
