@@ -25,7 +25,7 @@ $nounChoice = selectNoun($nouns);
     <title>Server Name Generator</title>
 </head>
 <body>
-    <h1><?php echo $adjectiveChoice . $nounChoice ?></h1>
+    <h1><?= $adjectiveChoice . $nounChoice ?></h1>
 </body>
 </html>
 

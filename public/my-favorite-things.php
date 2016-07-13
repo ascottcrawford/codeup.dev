@@ -17,9 +17,9 @@ $favoriteThings = ['Movies', 'Legos', 'MegaBlocks', 'SuperMan', 'Batman'];
 <body>
 	<h1>My Favorite Things</h1>
     <table>
-    <?php foreach ($favoriteThings as $favoriteThing) { ?>
-        <tr><td><?php echo $favoriteThing; ?></tr></td>
-    <?php } ?>
+    <?php foreach ($favoriteThings as $favoriteThing): ?>
+        <tr><td><?= $favoriteThing; ?></tr></td>
+    <?php endforeach; ?>
     </table>
 
 </body>
