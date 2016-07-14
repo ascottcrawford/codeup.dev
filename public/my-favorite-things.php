@@ -59,7 +59,7 @@
 function pageController() 
 {
 	$data = [];
-	$data['favoriteThing'] = ['Movies', 'Legos', 'MegaBlocks', 'SuperMan', 'Batman'];
+	$data['favoriteThings'] = ['Movies', 'Legos', 'MegaBlocks', 'SuperMan', 'Batman'];
 	
 	return $data;
 }

@@ -10,18 +10,8 @@
 //once it determines a vowel we will need to unset
 
 
-
+// Solve with FUnction
 $letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
-// $vowels = ['a', 'e', 'i', 'o', 'u'];
-
-// $consonants = str_replace($vowels, "", implode("", $letters));
-
-// var_dump($consonants);
-
-// var_dump(str_split($consonants));
-
-
-
 function removeVowels(&$vowels)
 {
 	foreach($vowels as $index => $vowel) {
@@ -34,22 +24,30 @@ function removeVowels(&$vowels)
 removeVowels($letters);
 print_r($letters);
 
+// Solve with string replace
+// $letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
+// $vowels = ['a', 'e', 'i', 'o', 'u'];
+
+// $consonants = str_replace($vowels, "", implode("", $letters));
+
+// var_dump($consonants);
+
+// var_dump(str_split($consonants));
 
 
+//My Garbage trying to figure out what I was doing
+		// $vowelsInLetters = [];
 
+		// $vowelsInLetters = array_intersect($letters, $vowels);
+		// var_dump($vowelsInLetters);
 
-// $vowelsInLetters = [];
+		// foreach ($letters as $vowel) {
+		// 	if ($)
+		// }
 
-// $vowelsInLetters = array_intersect($letters, $vowels);
-// var_dump($vowelsInLetters);
-
-// foreach ($letters as $vowel) {
-// 	if ($)
-// }
-
-// foreach ($letters as $letter) {
-// 	$vowelsInLetters = array_intersect($letters, $vowels);
-// 	}
-// }
+		// foreach ($letters as $letter) {
+		// 	$vowelsInLetters = array_intersect($letters, $vowels);
+		// 	}
+		// }
 
 

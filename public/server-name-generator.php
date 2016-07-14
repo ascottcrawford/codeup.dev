@@ -2,30 +2,35 @@
 
 function pageController()
 {
-	$data = [];
-	$data['adjectiveChoice'];
-	$data['nounChoice'];
+
+	$data['adjectives'] = ['big', 'funny', 'tired', 'old', 'young', 'blue', 'green', 'yellow', 'purple', 'tall'];
 	
 
-		$adjectives = ['big', 'funny', 'tired', 'old', 'young', 'blue', 'green', 'yellow', 'purple', 'tall'];
-		$nouns = ['street', 'car', 'house', 'pool', 'tree', 'shoes', 'jeans', 'shirt', 'boots', 'mittens'];
+
+	$data['nouns'] = ['street', 'car', 'house', 'pool', 'tree', 'shoes', 'jeans', 'shirt', 'boots', 'mittens'];
+
+	$data['adjective'] = array_rand ( $data['adjectives']);
+	$data['noun'] = array_rand ( $data['noun'])
 
 		// $adjectiveMessage = array_rand($adjectives, 1);
 		// $nounMessage = array_rand($nouns, 1);
 
-		function selectAdjective($adjectives) {
-			$adjectiveMessage = $adjectives[array_rand($adjectives, 1)];
-			return $adjectiveMessage;
-		}
-		$adjectiveChoice = selectAdjective($adjectives);
+		// function selectAdjective($adjectives) {
+		// 	$adjectiveMessage = $adjectives[array_rand($adjectives, 1)];
+		// 	return $adjectiveMessage;
+		// }
+		// $adjectiveMessage = selectAdjective($adjectives);
+		// var_dump($adjectiveMessage);
 
-		function selectNoun($nouns) {
-			$nounMessage = $nouns[array_rand($nouns, 1)];
-			return $nounMessage;
-		}
-		$nounChoice = selectNoun($nouns);
+		// function selectNoun($nouns) {
+		// 	$nounMessage = $nouns[array_rand($nouns, 1)];
+		// 	return $nounMessage;
+		// }
+		// $nounMessage = selectNoun($nouns);
+		// var_dump($nounMessage);
 
 	return $data;
+
 }
 extract(pageController());
 ?>
@@ -35,7 +40,7 @@ extract(pageController());
     <title>Server Name Generator</title>
 </head>
 <body>
-    <h1><?= $adjectiveChoice . $nounChoice ?></h1>
+    <h1><?= $adjectives[$adjective] . $nouns[$noun] ?></h1>
 </body>
 </html>
 
